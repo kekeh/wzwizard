@@ -16,7 +16,6 @@
         <h3>Wizard - AngularJS reusable UI component</h3>
 
         <div ng-controller="samplectrl">
-
             <wzwizard options="opt">
                 <wzpage title="Name">
                     <label for="firstname">First name</label><br/>
@@ -43,35 +42,41 @@
 
                 <wzpage title="Confirmation">
                     <table>
+                        <thead>
+                        <tr>
+                            <th style="width: 30%;">Key</th>
+                            <th style="width: 70%;">Value</th>
+                        </tr>
+                        </thead>
                         <tbody>
-                            <tr>
-                                <td style="width: 30%;">First name</td>
-                                <td style="width: 70%;">{{values.firstname}}</td>
-                            </tr>
-                            <tr>
-                                <td>Last name</td>
-                                <td>{{values.lastname}}</td>
-                            </tr>
-                            <tr>
-                                <td>Street address</td>
-                                <td>{{values.streetaddress}}</td>
-                            </tr>
-                            <tr>
-                                <td>Zip</td>
-                                <td>{{values.zip}}</td>
-                            </tr>
-                            <tr>
-                                <td>City</td>
-                                <td>{{values.city}}</td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td>{{values.email}}</td>
-                            </tr>
-                            <tr>
-                                <td>Phone</td>
-                                <td>{{values.phone}}</td>
-                            </tr>
+                        <tr>
+                            <td>First name</td>
+                            <td>{{values.firstname}}</td>
+                        </tr>
+                        <tr>
+                            <td>Last name</td>
+                            <td>{{values.lastname}}</td>
+                        </tr>
+                        <tr>
+                            <td>Street address</td>
+                            <td>{{values.streetaddress}}</td>
+                        </tr>
+                        <tr>
+                            <td>Zip</td>
+                            <td>{{values.zip}}</td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>{{values.city}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{{values.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>{{values.phone}}</td>
+                        </tr>
                         </tbody>
                     </table>
                 </wzpage>

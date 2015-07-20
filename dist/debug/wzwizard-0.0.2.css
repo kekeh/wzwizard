@@ -31,12 +31,11 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: #000;
     border-bottom: 6px solid #DDD;
 }
 
 .wzwizard .wztitletext {
-
+    color: #000;
 }
 
 .wzwizard .wzcontent {
@@ -57,6 +56,7 @@
     font-size: 12px;
     border: 1px solid #999;
     font-weight: bold;
+    color: #000;
 }
 
 .wzwizard .wzfooterbtn:hover:enabled {
@@ -94,6 +94,7 @@
     padding: 4px;
     margin: 2px;
     text-align: left;
+    line-height: 16px;
 }
 
 .wzwizard .icon-cross {
