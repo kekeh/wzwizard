@@ -1,0 +1,32 @@
+<div class="wzwizard">
+    <div class="wzpages">
+        <div class="wzpage" ng-repeat="p in wzpages" ng-style="{'width': 100/wzpages.length + '%'}" ng-class="{wzactive:p.visible}">
+            <span class="wztitletext" ng-if="opt.showPageNumber" style="margin-right:4px">
+                {{$index+1}}{{config.PAGE_NUMBER_SEPARATOR}}
+            </span>
+            <span class="wztitletext">
+                {{p.title}}
+            </span>
+        </div>
+    </div>
+    
+    <div class="wzcontent" ng-transclude></div>
+    
+    <div ng-class="{'wzok':response.result,'wzerror':!response.result}" ng-if="response.message!==undefined && response.message!==''">
+        {{response.message}}
+        <div style="float: right;margin-right: 6px;cursor: pointer;font-size: 14px;font-weight: bold;" 
+             ng-click="response.message=''">x</div>
+    </div>
+    
+    <div class="wzfooter">
+        <button class="wzfooterbtn" ng-click="backBtnClicked()" ng-if="visiblePageIdx>0">
+            {{opt.backBtnText}}
+        </button>
+        <button class="wzfooterbtn" ng-click="nextBtnClicked()" ng-if="visiblePageIdx<wzpages.length-1">
+            {{opt.nextBtnText}}
+        </button>
+        <button class="wzfooterbtn" ng-click="acceptBtnClicked()" ng-if="opt.acceptBtn.showAcceptBtn&&visiblePageIdx===wzpages.length-1">
+            {{opt.acceptBtn.acceptBtnText}}
+        </button>
+    </div>
+</div>
