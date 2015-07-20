@@ -9,15 +9,14 @@
             </span>
         </div>
     </div>
-    
-    <div class="wzcontent" ng-transclude></div>
-    
+
     <div ng-class="{'wzok':response.result,'wzerror':!response.result}" ng-if="response.message!==undefined && response.message!==''">
         {{response.message}}
-        <div style="float: right;margin-right: 6px;cursor: pointer;font-size: 14px;font-weight: bold;" 
-             ng-click="response.message=''">x</div>
+        <span class="icon icon-cross" ng-click="response.message=''"></span>
     </div>
     
+    <div class="wzcontent" ng-transclude></div>
+
     <div class="wzfooter">
         <button class="wzfooterbtn" ng-click="backBtnClicked()" ng-if="visiblePageIdx>0">
             {{opt.backBtnText}}

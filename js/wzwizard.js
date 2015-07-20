@@ -87,7 +87,7 @@ angular.module('wzwizard', [])
                 }
 
                 function resetError() {
-                    scope.isValid = {valid: true, message: ''};
+                    scope.response = {valid: true, message: ''};
                 }
             }
         };

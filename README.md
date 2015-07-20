@@ -1,4 +1,4 @@
-# wzwizard v. 0.0.1
+# wzwizard v. 0.0.2
 
 **Wizard - AngularJS reusable UI component**
 
@@ -7,10 +7,10 @@ Simple AngularJS directive which implements the wizard. Depends on only the Angu
 
 ## Usage
 
-* include the **wzwizard-0.0.1.min.js** and the **wzwizard-0.0.1.min.css** files into your project. See the **Build project** and the **Installation** chapters below.
+* include the **wzwizard-0.0.2.min.js** and the **wzwizard-0.0.2.min.css** files into your project. See the **Build project** and the **Installation** chapters below.
 ```html
-<script src="wzwizard-0.0.1.min.js"></script>
-<link href="wzwizard-0.0.1.min.css" rel="stylesheet" type="text/css">
+<script src="wzwizard-0.0.2.min.js"></script>
+<link href="wzwizard-0.0.2.min.css" rel="stylesheet" type="text/css">
 ```
 * inject the **wzwizard** module into your application module.
 ```js

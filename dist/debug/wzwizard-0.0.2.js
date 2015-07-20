@@ -1,13 +1,13 @@
 /* 
 *  Name: wzwizard 
 *  Description: Wizard - AngularJS reusable UI component 
-*  Version: 0.0.1 
+*  Version: 0.0.2 
 *  Author: kekeh 
 *  Homepage: http://kekeh.github.io/wzwizard 
 *  License: MIT 
 *  Date: 2015-07-20 
 */ 
-angular.module('template-wzwizard-0.0.1.html', ['templates/wzpage.html', 'templates/wzwizard.html']);
+angular.module('template-wzwizard-0.0.2.html', ['templates/wzpage.html', 'templates/wzwizard.html']);
 
 angular.module("templates/wzpage.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("templates/wzpage.html",
@@ -28,15 +28,14 @@ angular.module("templates/wzwizard.html", []).run(["$templateCache", function($t
     "            </span>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "    \n" +
-    "    <div class=\"wzcontent\" ng-transclude></div>\n" +
-    "    \n" +
+    "\n" +
     "    <div ng-class=\"{'wzok':response.result,'wzerror':!response.result}\" ng-if=\"response.message!==undefined && response.message!==''\">\n" +
     "        {{response.message}}\n" +
-    "        <div style=\"float: right;margin-right: 6px;cursor: pointer;font-size: 14px;font-weight: bold;\" \n" +
-    "             ng-click=\"response.message=''\">x</div>\n" +
+    "        <span class=\"icon icon-cross\" ng-click=\"response.message=''\"></span>\n" +
     "    </div>\n" +
     "    \n" +
+    "    <div class=\"wzcontent\" ng-transclude></div>\n" +
+    "\n" +
     "    <div class=\"wzfooter\">\n" +
     "        <button class=\"wzfooterbtn\" ng-click=\"backBtnClicked()\" ng-if=\"visiblePageIdx>0\">\n" +
     "            {{opt.backBtnText}}\n" +
@@ -57,7 +56,7 @@ angular.module("templates/wzwizard.html", []).run(["$templateCache", function($t
  * @name wzwizard
  * @description wzwizard is module of wzwizard.
  */
-angular.module('wzwizard', ["template-wzwizard-0.0.1.html"])
+angular.module('wzwizard', ["template-wzwizard-0.0.2.html"])
 
 /**
  * @ngdoc object
@@ -141,7 +140,7 @@ angular.module('wzwizard', ["template-wzwizard-0.0.1.html"])
                 }
 
                 function resetError() {
-                    scope.isValid = {valid: true, message: ''};
+                    scope.response = {valid: true, message: ''};
                 }
             }
         };

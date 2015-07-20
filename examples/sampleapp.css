@@ -20,8 +20,26 @@ p {
 
 input {
     background-color: #F0FFF0 !important;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    width: 99%;
+    padding: 5px 0 5px 5px;
+    border: 1px solid #AAA;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #EEE;
+}
+
+table, th, td {
+    border: 1px solid #AAA;
+    padding: 4px;
+}
+
 
 /*
 @media screen and (max-width: 1100px) {
