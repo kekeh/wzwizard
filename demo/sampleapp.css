@@ -8,7 +8,8 @@
 }
 
 .wzwizard select {
-    width: 100%;
+    width: 99.8%;
+    height: 27px;
 }
 
 .wzwizard table {
@@ -23,6 +24,7 @@
     background-color: #EEE;
     heigth: 30px;
 }
+
 .wzwizard table td {
     text-align: left;
 }
@@ -30,8 +32,8 @@
 .wzwizard table,
 .wzwizard table th,
 .wzwizard table td {
-    border: 1px solid #AAA;
     padding: 5px;
+    border: none;
 }
 
 .wzwizard label {

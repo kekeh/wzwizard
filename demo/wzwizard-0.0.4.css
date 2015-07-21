@@ -3,7 +3,7 @@
 }
 
 .wzwizard .wzcontent {
-    min-height: 250px;
+    min-height: 200px;
 }
 
 .wzwizard div,
@@ -39,12 +39,12 @@
 }
 
 .wzwizard .wzcontent {
-    padding: 8px;
-    margin: 0 2px;
+    padding: 4px;
+    margin: 10px 2px 5px 2px;
 }
 
 .wzwizard .wzfooter {
-    padding: 4px;
+    padding-top: 4px;
     margin: 2px;
     text-align: right;
 }
@@ -57,8 +57,10 @@
     border: 1px solid #999;
     font-weight: bold;
     color: #000;
+    outline: none;
 }
 
+.wzwizard .wzfooterbtn:focus:enabled,
 .wzwizard .wzfooterbtn:hover:enabled {
     background: #ADD8E6;
 }
@@ -92,7 +94,7 @@
 .wzwizard .wzok,
 .wzwizard .wzerror {
     padding: 4px;
-    margin: 2px;
+    margin-bottom: 4px;
     text-align: left;
     line-height: 16px;
 }
@@ -102,6 +104,11 @@
     float: right;
     font-size: 12px;
     line-height: 16px;
+}
+
+.wzwizard .icon-cross:hover,
+.wzwizard .icon-cross:focus {
+    color: #5FB4E6;
 }
 
 @media screen and (max-width: 520px) {
