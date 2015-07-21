@@ -1,13 +1,13 @@
 /* 
 *  Name: wzwizard 
 *  Description: Wizard - AngularJS reusable UI component 
-*  Version: 0.0.2 
+*  Version: 0.0.3 
 *  Author: kekeh 
 *  Homepage: http://kekeh.github.io/wzwizard 
 *  License: MIT 
-*  Date: 2015-07-20 
+*  Date: 2015-07-21 
 */ 
-angular.module('template-wzwizard-0.0.2.html', ['templates/wzpage.html', 'templates/wzwizard.html']);
+angular.module('template-wzwizard-0.0.3.html', ['templates/wzpage.html', 'templates/wzwizard.html']);
 
 angular.module("templates/wzpage.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("templates/wzpage.html",
@@ -40,10 +40,10 @@ angular.module("templates/wzwizard.html", []).run(["$templateCache", function($t
     "        <button class=\"wzfooterbtn\" ng-click=\"backBtnClicked()\" ng-if=\"visiblePageIdx>0\">\n" +
     "            {{opt.backBtnText}}\n" +
     "        </button>\n" +
-    "        <button class=\"wzfooterbtn\" ng-click=\"nextBtnClicked()\" ng-if=\"visiblePageIdx<wzpages.length-1\">\n" +
+    "        <button class=\"wzfooterbtn\" style=\"margin-left:4px\" ng-click=\"nextBtnClicked()\" ng-if=\"visiblePageIdx<wzpages.length-1\">\n" +
     "            {{opt.nextBtnText}}\n" +
     "        </button>\n" +
-    "        <button class=\"wzfooterbtn\" ng-click=\"acceptBtnClicked()\" ng-if=\"opt.acceptBtn.showAcceptBtn&&visiblePageIdx===wzpages.length-1\">\n" +
+    "        <button class=\"wzfooterbtn\" style=\"margin-left:4px\" ng-click=\"acceptBtnClicked()\" ng-if=\"opt.acceptBtn.showAcceptBtn&&visiblePageIdx===wzpages.length-1\">\n" +
     "            {{opt.acceptBtn.acceptBtnText}}\n" +
     "        </button>\n" +
     "    </div>\n" +
@@ -56,7 +56,7 @@ angular.module("templates/wzwizard.html", []).run(["$templateCache", function($t
  * @name wzwizard
  * @description wzwizard is module of wzwizard.
  */
-angular.module('wzwizard', ["template-wzwizard-0.0.2.html"])
+angular.module('wzwizard', ["template-wzwizard-0.0.3.html"])
 
 /**
  * @ngdoc object

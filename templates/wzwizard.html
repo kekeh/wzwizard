@@ -21,10 +21,10 @@
         <button class="wzfooterbtn" ng-click="backBtnClicked()" ng-if="visiblePageIdx>0">
             {{opt.backBtnText}}
         </button>
-        <button class="wzfooterbtn" ng-click="nextBtnClicked()" ng-if="visiblePageIdx<wzpages.length-1">
+        <button class="wzfooterbtn" style="margin-left:4px" ng-click="nextBtnClicked()" ng-if="visiblePageIdx<wzpages.length-1">
             {{opt.nextBtnText}}
         </button>
-        <button class="wzfooterbtn" ng-click="acceptBtnClicked()" ng-if="opt.acceptBtn.showAcceptBtn&&visiblePageIdx===wzpages.length-1">
+        <button class="wzfooterbtn" style="margin-left:4px" ng-click="acceptBtnClicked()" ng-if="opt.acceptBtn.showAcceptBtn&&visiblePageIdx===wzpages.length-1">
             {{opt.acceptBtn.acceptBtnText}}
         </button>
     </div>
