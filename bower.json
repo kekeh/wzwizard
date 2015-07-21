@@ -1,7 +1,7 @@
 {
   "name": "wzwizard",
   "description": "Wizard - AngularJS reusable UI component",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "http://kekeh.github.io/wzwizard",
   "license": "MIT",
   "authors": [
@@ -12,8 +12,8 @@
     "url": "https://github.com/kekeh/wzwizard.git"
   },
   "main": [
-    "dist/min/wzwizard-0.0.3.min.css",
-    "dist/min/wzwizard-0.0.3.min.js"
+    "dist/min/wzwizard-0.0.4.min.css",
+    "dist/min/wzwizard-0.0.4.min.js"
   ],
   "keywords": [
     "AngularJS",

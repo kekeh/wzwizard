@@ -1,13 +1,13 @@
 /* 
 *  Name: wzwizard 
 *  Description: Wizard - AngularJS reusable UI component 
-*  Version: 0.0.3 
+*  Version: 0.0.4 
 *  Author: kekeh 
 *  Homepage: http://kekeh.github.io/wzwizard 
 *  License: MIT 
 *  Date: 2015-07-21 
 */ 
-angular.module('template-wzwizard-0.0.3.html', ['templates/wzpage.html', 'templates/wzwizard.html']);
+angular.module('template-wzwizard-0.0.4.html', ['templates/wzpage.html', 'templates/wzwizard.html']);
 
 angular.module("templates/wzpage.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("templates/wzpage.html",
@@ -29,14 +29,14 @@ angular.module("templates/wzwizard.html", []).run(["$templateCache", function($t
     "        </div>\n" +
     "    </div>\n" +
     "\n" +
-    "    <div ng-class=\"{'wzok':response.result,'wzerror':!response.result}\" ng-if=\"response.message!==undefined && response.message!==''\">\n" +
-    "        {{response.message}}\n" +
-    "        <span class=\"icon icon-cross\" ng-click=\"response.message=''\"></span>\n" +
-    "    </div>\n" +
-    "    \n" +
     "    <div class=\"wzcontent\" ng-transclude></div>\n" +
     "\n" +
     "    <div class=\"wzfooter\">\n" +
+    "        <div ng-style=\"{'height': response.message===undefined||response.message==='' ? '30px':'0'}\"></div>\n" +
+    "        <div ng-class=\"{'wzok':response.result,'wzerror':!response.result}\" ng-if=\"response.message!==undefined && response.message!==''\">\n" +
+    "            {{response.message}}\n" +
+    "            <span class=\"icon icon-cross\" ng-keydown=\"$event.which===13?response.message='':null\" ng-click=\"response.message=''\" tabindex=\"0\"></span>\n" +
+    "        </div>\n" +
     "        <button class=\"wzfooterbtn\" ng-click=\"backBtnClicked()\" ng-if=\"visiblePageIdx>0\">\n" +
     "            {{opt.backBtnText}}\n" +
     "        </button>\n" +
@@ -56,7 +56,7 @@ angular.module("templates/wzwizard.html", []).run(["$templateCache", function($t
  * @name wzwizard
  * @description wzwizard is module of wzwizard.
  */
-angular.module('wzwizard', ["template-wzwizard-0.0.3.html"])
+angular.module('wzwizard', ["template-wzwizard-0.0.4.html"])
 
 /**
  * @ngdoc object

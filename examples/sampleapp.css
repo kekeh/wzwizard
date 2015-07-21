@@ -27,11 +27,17 @@ p {
     border: 1px solid #AAA;
 }
 
+.wzwizard select {
+    width: 99.8%;
+    height: 27px;
+}
+
 .wzwizard table {
     width: 100%;
     border-collapse: collapse;
     display: table;
     color: #000;
+    line-height: 1;
 }
 
 .wzwizard table th {
@@ -39,10 +45,13 @@ p {
     heigth: 30px;
 }
 
+.wzwizard table td {
+    text-align: left;
+}
+
 .wzwizard table,
 .wzwizard table th,
 .wzwizard table td {
-    border: 1px solid #AAA;
     padding: 5px;
 }
 

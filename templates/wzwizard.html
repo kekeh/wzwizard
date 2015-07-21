@@ -10,14 +10,14 @@
         </div>
     </div>
 
-    <div ng-class="{'wzok':response.result,'wzerror':!response.result}" ng-if="response.message!==undefined && response.message!==''">
-        {{response.message}}
-        <span class="icon icon-cross" ng-click="response.message=''"></span>
-    </div>
-    
     <div class="wzcontent" ng-transclude></div>
 
     <div class="wzfooter">
+        <div ng-style="{'height': response.message===undefined||response.message==='' ? '30px':'0'}"></div>
+        <div ng-class="{'wzok':response.result,'wzerror':!response.result}" ng-if="response.message!==undefined && response.message!==''">
+            {{response.message}}
+            <span class="icon icon-cross" ng-keydown="$event.which===13?response.message='':null" ng-click="response.message=''" tabindex="0"></span>
+        </div>
         <button class="wzfooterbtn" ng-click="backBtnClicked()" ng-if="visiblePageIdx>0">
             {{opt.backBtnText}}
         </button>

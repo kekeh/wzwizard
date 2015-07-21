@@ -73,7 +73,7 @@ sampleapp.controller('samplectrl', function ($scope) {
 
     function onAcceptBtnFn() {
         console.log('onAcceptBtnFn() called!');
-        return {result: true, message: 'Thanks, well done.'};
+        return {result: true, message: 'Well done!'};
     }
 
     // Configuration of the wzwizard
@@ -82,7 +82,7 @@ sampleapp.controller('samplectrl', function ($scope) {
         nextBtnText: 'Next',
         acceptBtn: {
             showAcceptBtn: true,
-            acceptBtnText: 'Save',
+            acceptBtnText: 'Accept',
             acceptBtnCb: onAcceptBtnFn
         },
         showPageNumber: true,
