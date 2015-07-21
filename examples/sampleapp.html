@@ -22,6 +22,8 @@
                     <input id="firstname" ng-model="values.firstname" placeholder="Type first name" type="text"><br/>
                     <label for="lastname">Last name</label><br/>
                     <input id="lastname" ng-model="values.lastname" placeholder="Type last name" type="text"><br/>
+                    <label for="gender">Gender</label><br/>
+                    <select id="gender" ng-model="values.gender" ng-options="gender.value as gender.label for gender in [{label: 'Choose', value:''},{label: 'Male', value:'male'},{label: 'Female', value:'female'}]"></select><br/>
                 </wzpage>
 
                 <wzpage title="Address">
@@ -56,6 +58,10 @@
                         <tr>
                             <td>Last name</td>
                             <td>{{values.lastname}}</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>{{values.gender}}</td>
                         </tr>
                         <tr>
                             <td>Street address</td>

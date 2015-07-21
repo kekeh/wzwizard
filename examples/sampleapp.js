@@ -15,6 +15,7 @@ sampleapp.controller('samplectrl', function ($scope) {
     $scope.values = {
         firstname: '',
         lastname: '',
+        gender: '',
         streetaddress: '',
         zip: '',
         city: '',
@@ -31,6 +32,9 @@ sampleapp.controller('samplectrl', function ($scope) {
             }
             else if ($scope.values.lastname === '') {
                 return {result: false, message: 'Last name: value required!'};
+            }
+            else if ($scope.values.gender === '') {
+                return {result: false, message: 'Gender: value required!'};
             }
             else {
                 return {result: true};

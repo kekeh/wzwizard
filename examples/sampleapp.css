@@ -18,7 +18,8 @@ p {
     font-size: 14px;
 }
 
-.wzwizard input {
+.wzwizard input,
+.wzwizard select {
     background-color: #F0FFF0 !important;
     margin-bottom: 14px;
     width: 99%;
