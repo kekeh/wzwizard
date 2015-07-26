@@ -50,27 +50,27 @@
                 <wzwizard options="opt">
                     <wzpage title="Name">
                         <label for="firstname">First name</label><br/>
-                        <input id="firstname" ng-model="values.firstname" placeholder="Type first name" type="text"><br/>
+                        <div class="inputCont"><input id="firstname" ng-model="values.firstname" placeholder="Type first name" type="text"></div>
                         <label for="lastname">Last name</label><br/>
-                        <input id="lastname" ng-model="values.lastname" placeholder="Type last name" type="text"><br/>
+                        <div class="inputCont"><input id="lastname" ng-model="values.lastname" placeholder="Type last name" type="text"></div>
                         <label for="gender">Gender</label><br/>
                         <select id="gender" ng-model="values.gender" ng-options="gender.value as gender.label for gender in [{label: 'Choose', value:''},{label: 'Male', value:'male'},{label: 'Female', value:'female'}]"></select><br/>
                     </wzpage>
 
                     <wzpage title="Address">
                         <label for="streetaddress">Street address</label><br/>
-                        <input id="streetaddress" ng-model="values.streetaddress" placeholder="Type street address" type="text"><br/>
+                        <div class="inputCont"><input id="streetaddress" ng-model="values.streetaddress" placeholder="Type street address" type="text"></div>
                         <label for="zip">Zip</label><br/>
-                        <input id="zip" ng-model="values.zip" placeholder="Type zip" type="text"><br/>
+                        <div class="inputCont"><input id="zip" ng-model="values.zip" placeholder="Type zip" type="text"></div>
                         <label for="city">City</label><br/>
-                        <input id="city" ng-model="values.city" placeholder="Type city" type="text"><br/>
+                        <div class="inputCont"><input id="city" ng-model="values.city" placeholder="Type city" type="text"></div>
                     </wzpage>
 
                     <wzpage title="Email & Phone">
                         <label for="email">Email</label><br/>
-                        <input id="email" ng-model="values.email" placeholder="Type email" type="text"><br/>
+                        <div class="inputCont"><input id="email" ng-model="values.email" placeholder="Type email" type="text"></div>
                         <label for="phone">Phone</label><br/>
-                        <input id="phone" ng-model="values.phone" placeholder="Type phone number" type="text"><br/>
+                        <div class="inputCont"><input id="phone" ng-model="values.phone" placeholder="Type phone number" type="text"></div>
                     </wzpage>
 
                     <wzpage title="Confirmation">
