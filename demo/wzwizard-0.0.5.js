@@ -1,13 +1,13 @@
 /* 
 *  Name: wzwizard 
 *  Description: Wizard - AngularJS reusable UI component 
-*  Version: 0.0.4 
+*  Version: 0.0.5 
 *  Author: kekeh 
 *  Homepage: http://kekeh.github.io/wzwizard 
 *  License: MIT 
-*  Date: 2015-07-21 
+*  Date: 2015-07-26 
 */ 
-angular.module('template-wzwizard-0.0.4.html', ['templates/wzpage.html', 'templates/wzwizard.html']);
+angular.module('template-wzwizard-0.0.5.html', ['templates/wzpage.html', 'templates/wzwizard.html']);
 
 angular.module("templates/wzpage.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("templates/wzpage.html",
@@ -56,7 +56,7 @@ angular.module("templates/wzwizard.html", []).run(["$templateCache", function($t
  * @name wzwizard
  * @description wzwizard is module of wzwizard.
  */
-angular.module('wzwizard', ["template-wzwizard-0.0.4.html"])
+angular.module('wzwizard', ["template-wzwizard-0.0.5.html"])
 
 /**
  * @ngdoc object
