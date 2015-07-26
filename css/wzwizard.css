@@ -60,6 +60,11 @@
     outline: none;
 }
 
+.wzwizard .wzfooterbtn::-moz-focus-inner {
+    border: 0;
+    outline: 0;
+}
+
 .wzwizard .wzfooterbtn:focus:enabled,
 .wzwizard .wzfooterbtn:hover:enabled {
     background: #ADD8E6;
