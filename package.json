@@ -2,11 +2,11 @@
   "author": "kekeh",
   "description": "Wizard - AngularJS reusable UI component",
   "name": "wzwizard",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "homepage": "http://kekeh.github.io/wzwizard",
   "dependencies": {
-    "angular": "~1.3.x"
+    "angular": "~1.4.x"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

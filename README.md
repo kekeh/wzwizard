@@ -1,4 +1,4 @@
-# wzwizard v. 0.0.5
+# wzwizard v. 0.0.6
 
 **Wizard - AngularJS reusable UI component**
 
@@ -7,10 +7,10 @@ Simple AngularJS directive which implements the wizard. Depends on only the Angu
 
 ## Usage
 
-* include the **wzwizard-0.0.5.min.js** and the **wzwizard-0.0.5.min.css** files into your project. See the **Build project** and the **Installation** chapters below.
+* include the **wzwizard-0.0.6.min.js** and the **wzwizard-0.0.6.min.css** files into your project. See the **Build project** and the **Installation** chapters below.
 ```html
-<script src="wzwizard-0.0.5.min.js"></script>
-<link href="wzwizard-0.0.5.min.css" rel="stylesheet" type="text/css">
+<script src="wzwizard-0.0.6.min.js"></script>
+<link href="wzwizard-0.0.6.min.css" rel="stylesheet" type="text/css">
 ```
 * inject the **wzwizard** module into your application module.
 ```js
@@ -181,7 +181,7 @@ Example of the function. See description of the parameters below the example.
 
 ##### Parameters
 * oldPageIdx: index of the old page in wizard (index is starting from zero)
-* oldPageIdx: index of the new page in wizard (index is starting from zero)
+* newPageIdx: index of the new page in wizard (index is starting from zero)
 
 
 ## Demo
@@ -209,7 +209,7 @@ bower install wzwizard
 * Opera 28.0
 * Mobile Safari 8
 
-## Licence
+## License
 * License: MIT
 
 ## Author

@@ -1,54 +1,17 @@
 /* 
 *  Name: wzwizard 
 *  Description: Wizard - AngularJS reusable UI component 
-*  Version: 0.0.5 
+*  Version: 0.0.6 
 *  Author: kekeh 
 *  Homepage: http://kekeh.github.io/wzwizard 
 *  License: MIT 
-*  Date: 2015-07-26 
+*  Date: 2015-08-24 
 */ 
-angular.module('template-wzwizard-0.0.5.html', ['templates/wzpage.html', 'templates/wzwizard.html']);
-
-angular.module("templates/wzpage.html", []).run(["$templateCache", function($templateCache) {
+angular.module('template-wzwizard-0.0.6.html', []).run(['$templateCache', function($templateCache) {
   $templateCache.put("templates/wzpage.html",
-    "<div ng-show=\"visible\" ng-transclude></div>\n" +
-    "");
-}]);
-
-angular.module("templates/wzwizard.html", []).run(["$templateCache", function($templateCache) {
+    "<div ng-show=visible ng-transclude></div>");
   $templateCache.put("templates/wzwizard.html",
-    "<div class=\"wzwizard\">\n" +
-    "    <div class=\"wzpages\">\n" +
-    "        <div class=\"wzpage\" ng-repeat=\"p in wzpages\" ng-style=\"{'width': 100/wzpages.length + '%'}\" ng-class=\"{wzactive:p.visible}\">\n" +
-    "            <span class=\"wztitletext\" ng-if=\"opt.showPageNumber\" style=\"margin-right:4px\">\n" +
-    "                {{$index+1}}{{config.PAGE_NUMBER_SEPARATOR}}\n" +
-    "            </span>\n" +
-    "            <span class=\"wztitletext\">\n" +
-    "                {{p.title}}\n" +
-    "            </span>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <div class=\"wzcontent\" ng-transclude></div>\n" +
-    "\n" +
-    "    <div class=\"wzfooter\">\n" +
-    "        <div ng-style=\"{'height': response.message===undefined||response.message==='' ? '30px':'0'}\"></div>\n" +
-    "        <div ng-class=\"{'wzok':response.result,'wzerror':!response.result}\" ng-if=\"response.message!==undefined && response.message!==''\">\n" +
-    "            {{response.message}}\n" +
-    "            <span class=\"icon icon-cross\" ng-keydown=\"$event.which===13?response.message='':null\" ng-click=\"response.message=''\" tabindex=\"0\"></span>\n" +
-    "        </div>\n" +
-    "        <button class=\"wzfooterbtn\" ng-click=\"backBtnClicked()\" ng-if=\"visiblePageIdx>0\">\n" +
-    "            {{opt.backBtnText}}\n" +
-    "        </button>\n" +
-    "        <button class=\"wzfooterbtn\" style=\"margin-left:4px\" ng-click=\"nextBtnClicked()\" ng-if=\"visiblePageIdx<wzpages.length-1\">\n" +
-    "            {{opt.nextBtnText}}\n" +
-    "        </button>\n" +
-    "        <button class=\"wzfooterbtn\" style=\"margin-left:4px\" ng-click=\"acceptBtnClicked()\" ng-if=\"opt.acceptBtn.showAcceptBtn&&visiblePageIdx===wzpages.length-1\">\n" +
-    "            {{opt.acceptBtn.acceptBtnText}}\n" +
-    "        </button>\n" +
-    "    </div>\n" +
-    "</div>\n" +
-    "");
+    "<div class=wzwizard><div class=wzpages><div class=wzpage ng-repeat=\"p in wzpages\" ng-style=\"{'width': 100/wzpages.length + '%'}\" ng-class={wzactive:p.visible}><span class=wztitletext ng-if=opt.showPageNumber style=margin-right:4px>{{$index+1}}{{config.PAGE_NUMBER_SEPARATOR}}</span> <span class=wztitletext>{{p.title}}</span></div></div><div class=wzcontent ng-transclude></div><div class=wzfooter><div ng-style=\"{'height': response.message===undefined||response.message===''?'30px':'0'}\"></div><div ng-class=\"{'wzok':response.result,'wzerror':!response.result}\" ng-if=\"response.message!==undefined && response.message!==''\"><span>{{response.message}}</span> <span class=\"icon icon-cross\" ng-keydown=\"$event.which===13?response.message='':null\" ng-click=\"response.message=''\" tabindex=0></span></div><button class=wzfooterbtn ng-click=backBtnClicked() ng-if=\"visiblePageIdx>0\">{{opt.backBtnText}}</button> <button class=wzfooterbtn style=margin-left:4px ng-click=nextBtnClicked() ng-if=\"visiblePageIdx<wzpages.length-1\">{{opt.nextBtnText}}</button> <button class=wzfooterbtn style=margin-left:4px ng-click=acceptBtnClicked() ng-if=\"opt.acceptBtn.showAcceptBtn&&visiblePageIdx===wzpages.length-1\">{{opt.acceptBtn.acceptBtnText}}</button></div></div>");
 }]);
 
 /**
@@ -56,7 +19,7 @@ angular.module("templates/wzwizard.html", []).run(["$templateCache", function($t
  * @name wzwizard
  * @description wzwizard is module of wzwizard.
  */
-angular.module('wzwizard', ["template-wzwizard-0.0.5.html"])
+angular.module('wzwizard', ["template-wzwizard-0.0.6.html"])
 
 /**
  * @ngdoc object
